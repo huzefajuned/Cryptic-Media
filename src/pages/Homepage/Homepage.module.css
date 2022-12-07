@@ -1,13 +1,13 @@
 .container {
-    height: 100vh;
+    max-height: 100vh;
     display: block;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
 .inner {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 90vw;
+    flex-wrap: wrap-reverse;
+    width: 90%;
     margin: auto;
-    padding: 10px;
 }

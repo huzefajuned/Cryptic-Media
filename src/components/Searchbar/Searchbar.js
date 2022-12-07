@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { toast } from "react-toastify";
 // Context
 import ShowsContext from "../../context/shows/showsContext";
 
@@ -14,7 +15,7 @@ const Searchbar = () => {
     e.preventDefault();
 
     if (searchTerm === "") {
-      alert("Invalid Inputs...");
+      toast.error("Invalid Inputs.     ❌ ");
     } else {
       searchShows(searchTerm);
     }

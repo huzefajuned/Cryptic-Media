@@ -1,5 +1,6 @@
 .container {
-    background-color: rgb(71, 156, 7);
+    background-color: rgb(28, 145, 141);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,7 +19,7 @@
 }
 
 .logo>h2>span {
-    background-color: rgb(123, 142, 135);
+    background-color: rgb(4, 92, 60);
     font-size: 16px;
     padding: 5px;
 }
@@ -36,9 +37,9 @@
 
 .navLinks>h4 {
     background-color: antiquewhite;
-    padding: 8px;
+    padding: 6px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .navLinks>h4:hover {

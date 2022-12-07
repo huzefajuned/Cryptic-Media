@@ -10,7 +10,8 @@ import AboutPage from "./pages/Aboutpage";
 import SinglePage from "./pages/Singlepage/Singlepage";
 import Loader from "./components/Loader/Loader";
 import Bookshow from "./pages/Bookshow/Bookshow";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   const [loading, setLoading] = useState(false);
   setTimeout(() => {
@@ -34,6 +35,7 @@ const App = () => {
             <Routes>
               <Route exact path="/bookShow" element={<Bookshow />} />
             </Routes>
+            <ToastContainer />
           </div>
         </>
       ) : (

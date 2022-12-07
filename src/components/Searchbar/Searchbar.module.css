@@ -1,12 +1,13 @@
 .container {
-    background-color: rgba(187, 178, 178, 0.742);
+    background-image: linear-gradient(to top, #32ab8f 0%, #ace0f9 100%);
     max-width: 40vw;
-    margin: 100px auto;
+    padding: 10px;
+    margin: auto;
     display: block;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 30%;
     border: 1px solid white;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .inner {
@@ -27,9 +28,10 @@
     border: none;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     outline: none;
     font-family: monospace;
+    text-align: center;
 }
 
 .btn {

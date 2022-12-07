@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import styles from "../Bookshow/Bookshow.module.css";
+import { ToastContainer, toast } from "react-toastify";
 
 const Bookshow = () => {
   // retriving state date
@@ -27,15 +28,20 @@ const Bookshow = () => {
   const handleSubmit = (e) => {
     const formData = { movie, name, email, age, contact, date };
     // console.log(formData);
-    localStorage.setItem("formData", JSON.stringify(formData));
-    setTimeout(() => {
-      setName("");
-      setEmail("");
-      setContact("");
-      setAge("");
-      setDate("");
-      setShow(true);
-    }, 1000);
+    if (!name || !email || !age || !contact || !date) {
+      toast.error("plaese fill all credentilas. ❌ ");
+    } else {
+      localStorage.setItem("formData", JSON.stringify(formData));
+      setTimeout(() => {
+        setName("");
+        setEmail("");
+        setContact("");
+        setAge("");
+        setDate("");
+        setShow(true);
+        toast.success("Ticket Created Successfully. ✅ ");
+      }, 1000);
+    }
   };
 
   const [items, setItems] = useState([]);
@@ -52,7 +58,7 @@ const Bookshow = () => {
     localStorage.clear("formData");
     setShow(false);
     setItems("");
-    alert("want to Deleted Ticket ?");
+    toast.error("Ticket Deleted Successfully. ✅ ");
   };
   return (
     <>
@@ -105,7 +111,7 @@ const Bookshow = () => {
                   id=""
                 />
               </div>
-              <button onClick={() => handleSubmit()}>Submit Form</button>
+              <button onClick={() => handleSubmit()}>Book Show </button>
             </div>
 
             {items.length != 0 || show === true ? (
